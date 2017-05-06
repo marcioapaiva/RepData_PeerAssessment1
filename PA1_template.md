@@ -1,5 +1,10 @@
-# Reproducible Research: Peer Assessment 1
-Márcio Paiva  
+---
+title: 'Reproducible Research: Peer Assessment 1'
+author: "Márcio Paiva"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -35,7 +40,7 @@ Márcio Paiva
     scale_x_continuous(limits = c(0, 24000))
 ```
 
-![](PA1_template_files/figure-html/hist_steps-1.png)<!-- -->
+![plot of chunk hist_steps](figure/hist_steps-1.png)
 
 The mean and median for the number of steps in a day:
 
@@ -74,7 +79,7 @@ The mean and median for the number of steps in a day:
       ylab("Steps per 5 minutes")
 ```
 
-![](PA1_template_files/figure-html/activity_pattern-1.png)<!-- -->
+![plot of chunk activity_pattern](figure/activity_pattern-1.png)
 
 Finding the 5-minute interval with the largest step average across all days.
 
@@ -122,7 +127,7 @@ activity %>%
     geom_col(aes(x = date, y = ratio))
 ```
 
-![](PA1_template_files/figure-html/missing_values_per_day-1.png)<!-- -->
+![plot of chunk missing_values_per_day](figure/missing_values_per_day-1.png)
 
 We can see that eight days have no data at all, accounting for all the missing values in the dataset.
 
@@ -157,7 +162,7 @@ The new histogram for steps each day:
     scale_x_continuous(limits = c(0, 24000))
 ```
 
-![](PA1_template_files/figure-html/hist_steps_filled-1.png)<!-- -->
+![plot of chunk hist_steps_filled](figure/hist_steps_filled-1.png)
 
 The eight days that were being counted as having zero steps now fall into the same bin.
 
@@ -207,7 +212,7 @@ ggplot(rbind(weekdays_pattern, weekend_pattern)) +
   ylab("Steps per 5 minutes")
 ```
 
-![](PA1_template_files/figure-html/weekdays_vs_weekends-1.png)<!-- -->
+![plot of chunk weekdays_vs_weekends](figure/weekdays_vs_weekends-1.png)
 
 
 
